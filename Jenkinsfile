@@ -40,7 +40,7 @@ pipeline {
 
             // Publish HTML report
             publishHTML([
-                allowMissing: false,
+                allowMissing: true,
                 alwaysLinkToLastBuild: true,
                 keepAll: true, // <-- required
                 reportDir: 'target',
