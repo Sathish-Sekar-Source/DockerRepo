@@ -34,18 +34,18 @@ pipeline {
     }
 
     post {
-            always {
-                // Archive ExtentReport.html
-                archiveArtifacts artifacts: 'target/ExtentReport.html', allowEmptyArchive: true
+        always {
+            // Archive ExtentReport.html
+            archiveArtifacts artifacts: 'target/ExtentReport.html', allowEmptyArchive: true
 
-                // Optionally, publish HTML report in Jenkins UI
-                publishHTML([
-                    reportDir: 'target',
-                    reportFiles: 'ExtentReport.html',
-                    reportName: 'Extent Report',
-                    allowMissing: true,
-                    alwaysLinkToLastBuild: true
-                ])
-            }
+            // Publish HTML report
+            publishHTML([
+                allowMissing: true,
+                alwaysLinkToLastBuild: true,
+                keepAll: true, // <-- required
+                reportDir: 'target',
+                reportFiles: 'ExtentReport.html',
+                reportName: 'Extent Report'
+            ])
         }
 }
