@@ -16,13 +16,13 @@ pipeline {
         stage('Start Selenium Grid') {
             steps {
                 bat 'docker-compose -f docker-compose.yml up -d'
-                bat 'timeout /t 15'
+                bat 'powershell -Command "Start-Sleep -Seconds 15"'
             }
         }
 
         stage('Run Tests') {
             steps {
-                bat 'mvn clean test'
+                bat 'mvn clean test -Dsurefire.reportFormat=xml'
             }
         }
 
