@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Selenium_Grid_Suite" class="navigator-link">
-              <span class="suite-name border-passed">Selenium Grid Suite</span>
+              <span class="suite-name border-failed">Selenium Grid Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,7 +92,26 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">4 methods, 2 failed,   2 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Selenium_Grid_Suite" class="hide-methods failed suite-Selenium_Grid_Suite"> (hide)</a> <!-- hide-methods failed suite-Selenium_Grid_Suite -->
+                      <a href="#" panel-name="suite-Selenium_Grid_Suite" class="show-methods failed suite-Selenium_Grid_Suite"> (show)</a> <!-- show-methods failed suite-Selenium_Grid_Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Selenium_Grid_Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Selenium_Grid_Suite" title="GoogleTest" class="method navigator-link" hash-for-method="testWrongGoogleTitle">testWrongGoogleTitle</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Selenium_Grid_Suite" title="GoogleTest" class="method navigator-link" hash-for-method="testWrongGoogleTitle">testWrongGoogleTitle</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Selenium_Grid_Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -123,6 +142,46 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Selenium_Grid_Suite" class="panel Selenium_Grid_Suite">
+          <div class="suite-Selenium_Grid_Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">GoogleTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testWrongGoogleTitle">
+                  </a> <!-- testWrongGoogleTitle -->
+                  <span class="method-name">testWrongGoogleTitle</span>
+                  <div class="stack-trace">java.lang.AssertionError: Title verification failed!
+	at GoogleTest.testWrongGoogleTitle(GoogleTest.java:31)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 16 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testWrongGoogleTitle">
+                  </a> <!-- testWrongGoogleTitle -->
+                  <span class="method-name">testWrongGoogleTitle</span>
+                  <div class="stack-trace">java.lang.AssertionError: Title verification failed!
+	at GoogleTest.testWrongGoogleTitle(GoogleTest.java:31)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 16 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Selenium_Grid_Suite-class-failed -->
           <div class="suite-Selenium_Grid_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -207,20 +266,28 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(4);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'testGoogleTitle')
 data.setCell(0, 2, 'GoogleTest')
-data.setCell(0, 3, 9642);
+data.setCell(0, 3, 8346);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'testGoogleTitle')
 data.setCell(1, 2, 'GoogleTest')
-data.setCell(1, 3, 7115);
+data.setCell(1, 3, 6309);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'testWrongGoogleTitle')
+data.setCell(2, 2, 'GoogleTest')
+data.setCell(2, 3, 6115);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'testWrongGoogleTitle')
+data.setCell(3, 2, 'GoogleTest')
+data.setCell(3, 3, 4532);
 window.suiteTableData['Selenium_Grid_Suite']= { tableData: data, tableDiv: 'times-div-Selenium_Grid_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 15 seconds</span>
+              <span class="suite-total-time">Total running time: 24 seconds</span>
               <div id="times-div-Selenium_Grid_Suite">
               </div> <!-- times-div-Selenium_Grid_Suite -->
             </div> <!-- times-div -->
@@ -247,30 +314,66 @@ return data;
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
               <div class="chronological-class-name">GoogleTest</div> <!-- chronological-class-name -->
-              <div class="configuration-method before">
-                <span class="method-name">setUp(chrome)</span>
+              <div class="configuration-suite before">
+                <span class="method-name">setUpReport</span>
                 <span class="method-start">0 ms</span>
+              </div> <!-- configuration-suite before -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(chrome, public void GoogleTest.testGoogleTitle() throws java.lang.InterruptedException)</span>
+                <span class="method-start">206 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
-                <span class="method-name">setUp(firefox)</span>
-                <span class="method-start">1 ms</span>
+                <span class="method-name">setUp(firefox, public void GoogleTest.testGoogleTitle() throws java.lang.InterruptedException)</span>
+                <span class="method-start">207 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testGoogleTitle</span>
-                <span class="method-start">2534 ms</span>
+                <span class="method-start">1900 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testGoogleTitle</span>
-                <span class="method-start">5529 ms</span>
+                <span class="method-start">4541 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">9653 ms</span>
+                <span class="method-name">tearDown([TestResult name=testGoogleTitle status=SUCCESS method=GoogleTest.testGoogleTitle()[pri:0, instance:...)</span>
+                <span class="method-start">8214 ms</span>
               </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(chrome, public void GoogleTest.testWrongGoogleTitle() throws java.lang.InterruptedException)</span>
+                <span class="method-start">8327 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testWrongGoogleTitle</span>
+                <span class="method-start">10311 ms</span>
+              </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">15172 ms</span>
+                <span class="method-name">tearDown([TestResult name=testGoogleTitle status=SUCCESS method=GoogleTest.testGoogleTitle()[pri:0, instance:...)</span>
+                <span class="method-start">12888 ms</span>
               </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(firefox, public void GoogleTest.testWrongGoogleTitle() throws java.lang.InterruptedException)</span>
+                <span class="method-start">13618 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=testWrongGoogleTitle status=FAILURE method=GoogleTest.testWrongGoogleTitle()[pri:0,...)</span>
+                <span class="method-start">14850 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testWrongGoogleTitle</span>
+                <span class="method-start">17340 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=testWrongGoogleTitle status=FAILURE method=GoogleTest.testWrongGoogleTitle()[pri:0,...)</span>
+                <span class="method-start">23457 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-suite after">
+                <span class="method-name">tearDownReport</span>
+                <span class="method-start">24226 ms</span>
+              </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

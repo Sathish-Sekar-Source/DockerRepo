@@ -22,7 +22,7 @@ pipeline {
 
         stage('Run Tests') {
             steps {
-                bat 'mvn clean test -Dsurefire.reportFormat=xml'
+                bat 'mvn clean test'
             }
         }
 
@@ -34,12 +34,18 @@ pipeline {
     }
 
     post {
-        always {
-            allure([
-                            includeProperties: false,
-                            jdk: 'jdk',
-                            results: [[path: 'target/allure-results']]
-                        ])
+            always {
+                // Archive ExtentReport.html
+                archiveArtifacts artifacts: 'target/ExtentReport.html', allowEmptyArchive: true
+
+                // Optionally, publish HTML report in Jenkins UI
+                publishHTML([
+                    reportDir: 'target',
+                    reportFiles: 'ExtentReport.html',
+                    reportName: 'Extent Report',
+                    allowMissing: true,
+                    alwaysLinkToLastBuild: true
+                ])
+            }
         }
-    }
 }

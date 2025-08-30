@@ -1,54 +1,210 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="2" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-08-30T17:02:22 IST" name="Selenium Grid Suite" finished-at="2025-08-30T17:02:38 IST" duration-ms="15989">
+  <suite started-at="2025-08-30T20:54:31 IST" name="Selenium Grid Suite" finished-at="2025-08-30T20:54:55 IST" duration-ms="24036">
     <groups>
     </groups>
-    <test started-at="2025-08-30T17:02:22 IST" name="Chrome Test" finished-at="2025-08-30T17:02:32 IST" duration-ms="9907">
+    <test started-at="2025-08-30T20:54:31 IST" name="Chrome Test" finished-at="2025-08-30T20:54:45 IST" duration-ms="14818">
       <class name="GoogleTest">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:GoogleTest@481a996b]" started-at="2025-08-30T17:02:22 IST" name="setUp" finished-at="2025-08-30T17:02:25 IST" duration-ms="2534" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.reflect.Method)[pri:0, instance:GoogleTest@6379eb]" started-at="2025-08-30T20:54:31 IST" name="setUp" finished-at="2025-08-30T20:54:32 IST" duration-ms="1692" status="PASS">
           <params>
             <param index="0">
               <value>
                 <![CDATA[chrome]]>
               </value>
             </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="testGoogleTitle()[pri:0, instance:GoogleTest@481a996b]" started-at="2025-08-30T17:02:25 IST" name="testGoogleTitle" finished-at="2025-08-30T17:02:32 IST" duration-ms="7115" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testGoogleTitle -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:GoogleTest@481a996b]" started-at="2025-08-30T17:02:32 IST" name="tearDown" finished-at="2025-08-30T17:02:32 IST" duration-ms="196" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- GoogleTest -->
-    </test> <!-- Chrome Test -->
-    <test started-at="2025-08-30T17:02:22 IST" name="Firefox Test" finished-at="2025-08-30T17:02:38 IST" duration-ms="15989">
-      <class name="GoogleTest">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:GoogleTest@399f45b1]" started-at="2025-08-30T17:02:22 IST" name="setUp" finished-at="2025-08-30T17:02:28 IST" duration-ms="5528" status="PASS">
-          <params>
-            <param index="0">
+            <param index="1">
               <value>
-                <![CDATA[firefox]]>
+                <![CDATA[public void GoogleTest.testGoogleTitle() throws java.lang.InterruptedException]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testGoogleTitle()[pri:0, instance:GoogleTest@399f45b1]" started-at="2025-08-30T17:02:28 IST" name="testGoogleTitle" finished-at="2025-08-30T17:02:37 IST" duration-ms="9642" status="PASS">
+        <test-method signature="testGoogleTitle()[pri:0, instance:GoogleTest@6379eb]" started-at="2025-08-30T20:54:32 IST" name="testGoogleTitle" finished-at="2025-08-30T20:54:39 IST" duration-ms="6309" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testGoogleTitle -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:GoogleTest@399f45b1]" started-at="2025-08-30T17:02:37 IST" name="tearDown" finished-at="2025-08-30T17:02:38 IST" duration-ms="762" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:GoogleTest@6379eb]" started-at="2025-08-30T20:54:39 IST" name="tearDown" finished-at="2025-08-30T20:54:39 IST" duration-ms="110" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testGoogleTitle status=SUCCESS method=GoogleTest.testGoogleTitle()[pri:0, instance:GoogleTest@6379eb] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.reflect.Method)[pri:0, instance:GoogleTest@6379eb]" started-at="2025-08-30T20:54:39 IST" name="setUp" finished-at="2025-08-30T20:54:41 IST" duration-ms="1984" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void GoogleTest.testWrongGoogleTitle() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testWrongGoogleTitle()[pri:0, instance:GoogleTest@6379eb]" started-at="2025-08-30T20:54:41 IST" name="testWrongGoogleTitle" finished-at="2025-08-30T20:54:45 IST" duration-ms="4532" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Title verification failed!]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Title verification failed!
+at org.testng.Assert.fail(Assert.java:111)
+at GoogleTest.testWrongGoogleTitle(GoogleTest.java:31)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testWrongGoogleTitle -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:GoogleTest@6379eb]" started-at="2025-08-30T20:54:45 IST" name="tearDown" finished-at="2025-08-30T20:54:45 IST" duration-ms="148" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testWrongGoogleTitle status=FAILURE method=GoogleTest.testWrongGoogleTitle()[pri:0, instance:GoogleTest@6379eb] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- GoogleTest -->
+    </test> <!-- Chrome Test -->
+    <test started-at="2025-08-30T20:54:31 IST" name="Firefox Test" finished-at="2025-08-30T20:54:55 IST" duration-ms="24036">
+      <class name="GoogleTest">
+        <test-method is-config="true" signature="setUpReport()[pri:0, instance:GoogleTest@4f83df68]" started-at="2025-08-30T20:54:30 IST" name="setUpReport" finished-at="2025-08-30T20:54:31 IST" duration-ms="171" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpReport -->
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.reflect.Method)[pri:0, instance:GoogleTest@4f83df68]" started-at="2025-08-30T20:54:31 IST" name="setUp" finished-at="2025-08-30T20:54:35 IST" duration-ms="4333" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void GoogleTest.testGoogleTitle() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testGoogleTitle()[pri:0, instance:GoogleTest@4f83df68]" started-at="2025-08-30T20:54:35 IST" name="testGoogleTitle" finished-at="2025-08-30T20:54:43 IST" duration-ms="8346" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGoogleTitle -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:GoogleTest@4f83df68]" started-at="2025-08-30T20:54:43 IST" name="tearDown" finished-at="2025-08-30T20:54:44 IST" duration-ms="730" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testGoogleTitle status=SUCCESS method=GoogleTest.testGoogleTitle()[pri:0, instance:GoogleTest@4f83df68] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.reflect.Method)[pri:0, instance:GoogleTest@4f83df68]" started-at="2025-08-30T20:54:44 IST" name="setUp" finished-at="2025-08-30T20:54:48 IST" duration-ms="3721" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void GoogleTest.testWrongGoogleTitle() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testWrongGoogleTitle()[pri:0, instance:GoogleTest@4f83df68]" started-at="2025-08-30T20:54:48 IST" name="testWrongGoogleTitle" finished-at="2025-08-30T20:54:54 IST" duration-ms="6115" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Title verification failed!]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Title verification failed!
+at org.testng.Assert.fail(Assert.java:111)
+at GoogleTest.testWrongGoogleTitle(GoogleTest.java:31)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testWrongGoogleTitle -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:GoogleTest@4f83df68]" started-at="2025-08-30T20:54:54 IST" name="tearDown" finished-at="2025-08-30T20:54:55 IST" duration-ms="761" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testWrongGoogleTitle status=FAILURE method=GoogleTest.testWrongGoogleTitle()[pri:0, instance:GoogleTest@4f83df68] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="tearDownReport()[pri:0, instance:GoogleTest@4f83df68]" started-at="2025-08-30T20:54:55 IST" name="tearDownReport" finished-at="2025-08-30T20:54:55 IST" duration-ms="249" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownReport -->
       </class> <!-- GoogleTest -->
     </test> <!-- Firefox Test -->
   </suite> <!-- Selenium Grid Suite -->
