@@ -37,7 +37,7 @@ pipeline {
         always {
             allure([
                             includeProperties: false,
-                            jdk: '',
+                            jdk: 'jdk',
                             results: [[path: 'target/allure-results']]
                         ])
         }
