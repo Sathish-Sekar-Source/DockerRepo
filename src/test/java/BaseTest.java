@@ -17,10 +17,12 @@ public class BaseTest {
     public void setUp(String browser) throws MalformedURLException {
         if (browser.equalsIgnoreCase("chrome")) {
             ChromeOptions options = new ChromeOptions();
+            options.addArguments("--headless=new", "--disable-gpu");
             driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), options);
 
         } else if (browser.equalsIgnoreCase("firefox")) {
             FirefoxOptions options = new FirefoxOptions();
+            options.addArguments("--headless");
             driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), options);
 
         } else {

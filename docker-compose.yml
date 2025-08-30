@@ -11,6 +11,11 @@ services:
   chrome:
     image: selenium/node-chrome:4.23.0
     shm_size: 2gb
+    deploy:
+      resources:
+        limits:
+          cpus: "1.0"
+          memory: 2g
     depends_on:
       - selenium-hub
     environment:
@@ -24,6 +29,11 @@ services:
   firefox:
     image: selenium/node-firefox:4.23.0
     shm_size: 2gb
+    deploy:
+      resources:
+        limits:
+          cpus: "1.0"
+          memory: 2g
     depends_on:
       - selenium-hub
     environment:
